@@ -25,7 +25,7 @@ SECRET_KEY = 'jfm1$bg^g=3n@$d)$3xc2fj6y=)*v(u+_=e%3v9)%a!dol%y(@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -145,8 +145,6 @@ if os.getcwd() == '/app':
     #Honor the 'X-Forwarded-Proto' harder for request.is_secure()
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-    #Allow all host headers.
-    ALLOWED_HOSTS['*']
 
     #Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
